@@ -1,6 +1,9 @@
 package racingcar;
 
 public class Car {
-    public Car(String juniq) {
+    private final String name;
+
+    public Car(String name) {
+        this.name = name;
     }
 }
