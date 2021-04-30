@@ -9,4 +9,9 @@ class CarTest {
     void create() {
         assertThatCode(() -> new Car("juniq")).doesNotThrowAnyException();
     }
+
+    @Test
+    void move() {
+        assertThatCode(() -> new Car("juniq").move()).doesNotThrowAnyException();
+    }
 }
