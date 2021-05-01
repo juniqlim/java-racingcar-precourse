@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class PositionTest {
     @Test
-    void increase() {
+    void move() {
         Position position = Position.of(0);
 
         position.move(() -> true);
