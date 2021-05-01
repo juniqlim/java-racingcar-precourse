@@ -1,5 +1,6 @@
 package racingcar;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,10 @@ class CarTest {
 
     @Test
     void move() {
-        assertThatCode(() -> new Car("juniq").move(() -> true)).doesNotThrowAnyException();
+        Car car = new Car("juniq");
+
+        car.move(() -> true);
+
+        assertThat(car).isEqualTo(new Car("juniq", 1));
     }
 }

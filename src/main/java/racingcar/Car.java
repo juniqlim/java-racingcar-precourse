@@ -9,6 +9,11 @@ public class Car {
         this.position = Position.of();
     }
 
+    public Car(String name, int position) {
+        this.name = Name.of(name);
+        this.position = Position.of(position);
+    }
+
     public void move(MoveStrategy moveStrategy) {
         position.move(moveStrategy);
     }
