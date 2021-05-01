@@ -3,11 +3,11 @@ package racingcar;
 import java.util.Random;
 
 public class Car {
-    private final String name;
+    private final Name name;
     private int position;
 
     public Car(String name) {
-        this.name = name;
+        this.name = new Name(name);
     }
 
     public void move() {
