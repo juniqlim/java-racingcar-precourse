@@ -4,14 +4,17 @@ public class Car {
     private final Name name;
     private final Position position;
 
-    public Car(String name) {
-        this.name = Name.of(name);
-        this.position = Position.of();
-    }
-
-    public Car(String name, int position) {
+    private Car(String name, int position) {
         this.name = Name.of(name);
         this.position = Position.of(position);
+    }
+
+    public static Car of(String name, int position) {
+        return new Car(name, position);
+    }
+
+    public static Car of(String name) {
+        return of(name, 0);
     }
 
     public void move(MoveStrategy moveStrategy) {

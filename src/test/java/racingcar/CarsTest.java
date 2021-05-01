@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 class CarsTest {
-    private static final List<Car> cars = Arrays.asList(new Car("juniq"), new Car("mingk"));
+    private static final List<Car> cars = Arrays.asList(Car.of("juniq"), Car.of("mingk"));
 
     @Test
     void create() {
