@@ -7,7 +7,7 @@ public class Car {
     private int position;
 
     public Car(String name) {
-        this.name = new Name(name);
+        this.name = Name.of(name);
     }
 
     public void move() {
