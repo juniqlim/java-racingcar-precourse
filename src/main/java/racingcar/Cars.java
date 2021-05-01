@@ -10,5 +10,8 @@ public class Cars {
     }
 
     public void move() {
+        for (Car car : cars) {
+            car.move();
+        }
     }
 }
