@@ -17,6 +17,6 @@ class CarTest {
 
         car.move(() -> true);
 
-        assertThat(car).isEqualTo(Car.of("juniq", 1));
+        assertThat(car).usingRecursiveComparison().isEqualTo(Car.of("juniq", 1));
     }
 }
