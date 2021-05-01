@@ -1,21 +1,18 @@
 package racingcar;
 
-import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 
 class CarsTest {
-    private static final List<Car> cars = Arrays.asList(Car.of("juniq"), Car.of("mingk"));
-
-    @Test
-    void create() {
-        assertThatCode(() -> new Cars(cars)).doesNotThrowAnyException();
-    }
-
     @Test
     void move() {
-        assertThatCode(() -> new Cars(cars).move(() -> true)).doesNotThrowAnyException();
+        Cars cars = new Cars(Arrays.asList(Car.of("juniq"), Car.of("mingk")));
+
+        cars.move(() -> true);
+
+        assertThat(cars).usingRecursiveComparison()
+            .isEqualTo(new Cars(Arrays.asList(Car.of("juniq", 1), Car.of("mingk", 1))));
     }
 }
