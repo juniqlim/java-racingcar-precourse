@@ -9,9 +9,9 @@ public class Cars {
         this.cars = cars;
     }
 
-    public void move() {
+    public void move(MoveStrategy moveStrategy) {
         for (Car car : cars) {
-            car.move();
+            car.move(moveStrategy);
         }
     }
 }

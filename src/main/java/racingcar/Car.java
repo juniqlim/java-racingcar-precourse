@@ -9,7 +9,7 @@ public class Car {
         this.position = Position.of();
     }
 
-    public void move() {
-        position.move();
+    public void move(MoveStrategy moveStrategy) {
+        position.move(moveStrategy);
     }
 }

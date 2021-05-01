@@ -9,7 +9,7 @@ class PositionTest {
     void increase() {
         Position position = Position.of(0);
 
-        position.move();
+        position.move(() -> true);
 
         assertThat(position).isEqualTo(Position.of(1));
     }

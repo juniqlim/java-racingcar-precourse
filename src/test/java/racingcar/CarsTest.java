@@ -16,6 +16,6 @@ class CarsTest {
 
     @Test
     void move() {
-        assertThatCode(() -> new Cars(cars).move()).doesNotThrowAnyException();
+        assertThatCode(() -> new Cars(cars).move(() -> true)).doesNotThrowAnyException();
     }
 }

@@ -1,7 +1,6 @@
 package racingcar;
 
 import java.util.Objects;
-import java.util.Random;
 
 public class Position {
     private int position;
@@ -18,8 +17,8 @@ public class Position {
         return new Position(position);
     }
 
-    public void move() {
-        if (new Random().nextInt(9) >= 4) {
+    public void move(MoveStrategy moveStrategy) {
+        if (moveStrategy.movable()) {
             this.position++;
         }
     }
