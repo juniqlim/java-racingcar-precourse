@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
@@ -14,7 +15,12 @@ public class Cars {
     }
 
     public static Cars of(String names) {
-        return null;
+        String[] splitedNames = names.split(",");
+        List<Car> cars = new ArrayList<>();
+        for (String name : splitedNames) {
+            cars.add(Car.of(name));
+        }
+        return new Cars(cars);
     }
 
     public void move(MoveStrategy moveStrategy) {
