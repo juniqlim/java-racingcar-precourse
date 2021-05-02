@@ -20,4 +20,12 @@ public class Car {
     public void move(MoveStrategy moveStrategy) {
         position.move(moveStrategy);
     }
+
+    public String nameValue() {
+        return name.value();
+    }
+
+    public int positionValue() {
+        return position.value();
+    }
 }

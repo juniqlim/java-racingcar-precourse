@@ -1,9 +1,10 @@
 package racingcar;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Cars {
+public class Cars implements Iterable<Car> {
     private final List<Car> cars;
 
     private Cars(List<Car> cars) {
@@ -27,5 +28,10 @@ public class Cars {
         for (Car car : cars) {
             car.move(moveStrategy);
         }
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return cars.iterator();
     }
 }
