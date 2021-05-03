@@ -34,11 +34,15 @@ public class Cars implements Iterable<Car> {
         int topPosition = findTopPosition();
         List<Car> winners = new ArrayList<>();
         for (Car car : cars) {
-            if (car.equalPosition(topPosition)) {
-                winners.add(car);
-            }
+            addWinner(topPosition, winners, car);
         }
         return winners;
+    }
+
+    private void addWinner(int topPosition, List<Car> winners, Car car) {
+        if (car.equalPosition(topPosition)) {
+            winners.add(car);
+        }
     }
 
     private int findTopPosition() {
