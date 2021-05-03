@@ -34,7 +34,7 @@ public class Cars implements Iterable<Car> {
         int topPosition = findTopPosition();
         List<Car> winners = new ArrayList<>();
         for (Car car : cars) {
-            if (car.positionValue() == topPosition) {
+            if (car.equalPosition(topPosition)) {
                 winners.add(car);
             }
         }
@@ -44,16 +44,9 @@ public class Cars implements Iterable<Car> {
     private int findTopPosition() {
         int topPosition = 0;
         for (Car car : cars) {
-            topPosition = largerNumber(topPosition, car.positionValue());
+            topPosition = car.largerPosition(topPosition);
         }
         return topPosition;
-    }
-
-    private int largerNumber(int firstNumber, int secondNumber) {
-        if (firstNumber < secondNumber) {
-            return secondNumber;
-        }
-        return firstNumber;
     }
 
     @Override
