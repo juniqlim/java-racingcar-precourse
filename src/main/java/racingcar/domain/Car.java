@@ -21,11 +21,11 @@ public class Car {
         position.move(moveStrategy);
     }
 
-    public String nameValue() {
+    public String name() {
         return name.value();
     }
 
-    public int positionValue() {
+    public int position() {
         return position.value();
     }
 
