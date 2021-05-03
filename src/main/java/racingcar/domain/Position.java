@@ -9,10 +9,6 @@ public class Position {
         this.position = position;
     }
 
-    public static Position of() {
-        return new Position(0);
-    }
-
     public static Position of(int position) {
         return new Position(position);
     }
