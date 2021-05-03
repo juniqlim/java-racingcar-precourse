@@ -21,4 +21,12 @@ class CarsTest {
         assertThat(Cars.of("juniq,mingk")).usingRecursiveComparison()
             .isEqualTo(Cars.of(Arrays.asList(Car.of("juniq"), Car.of("mingk"))));
     }
+
+    @Test
+    void winners() {
+        Cars cars = Cars.of(Arrays.asList(Car.of("juniq", 2), Car.of("chao"), Car.of("mingk", 2)));
+
+        assertThat(cars.winners()).usingRecursiveComparison()
+            .isEqualTo(Cars.of(Arrays.asList(Car.of("juniq", 2), Car.of("mingk", 2))));
+    }
 }

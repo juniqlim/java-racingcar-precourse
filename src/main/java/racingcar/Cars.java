@@ -30,6 +30,10 @@ public class Cars implements Iterable<Car> {
         }
     }
 
+    public List<Car> winners() {
+        return null;
+    }
+
     @Override
     public Iterator<Car> iterator() {
         return cars.iterator();
