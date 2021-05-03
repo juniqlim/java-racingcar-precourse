@@ -13,11 +13,11 @@ public class ResultView {
     }
 
     private static String positionGraph(int position) {
-        String positionGraph = "";
+        StringBuilder positionGraph = new StringBuilder();
         for (int i = 0; i < position; i++) {
-            positionGraph += "-";
+            positionGraph.append("-");
         }
-        return positionGraph;
+        return positionGraph.toString();
     }
 
     public static void printWinner(List<Car> winners) {
