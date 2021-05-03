@@ -11,6 +11,6 @@ class PositionTest {
 
         position.move(() -> true);
 
-        assertThat(position).isEqualTo(Position.of(1));
+        assertThat(position).usingRecursiveComparison().isEqualTo(Position.of(1));
     }
 }
