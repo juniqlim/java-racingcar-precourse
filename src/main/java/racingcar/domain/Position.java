@@ -22,6 +22,9 @@ public class Position {
     }
 
     public Position max(Position otherPosition) {
+        if (this.value() < otherPosition.value()) {
+            return otherPosition;
+        }
         return this;
     }
 }
