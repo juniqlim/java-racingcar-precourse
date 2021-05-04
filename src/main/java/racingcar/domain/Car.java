@@ -29,11 +29,11 @@ public class Car {
         return position.value();
     }
 
-    public int largerPosition(int otherPosition) {
-        return Math.max(position.value(), otherPosition);
+    public Position largerPosition(Position otherPosition) {
+        return position.max(otherPosition);
     }
 
-    public boolean equalPosition(int otherPosition) {
-        return position.value() == otherPosition;
+    public boolean equalPosition(Position otherPosition) {
+        return position.equals(otherPosition);
     }
 }

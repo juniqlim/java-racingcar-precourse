@@ -18,12 +18,12 @@ class CarTest {
     @Test
     @DisplayName("더 큰 위치를 반환")
     void largerPosition() {
-        assertThat(Car.of("juniq").largerPosition(1)).isEqualTo(1);
+        assertThat(Car.of("juniq").largerPosition(Position.of(1))).isEqualTo(Position.of(1));
     }
 
     @Test
     @DisplayName("같은 포지션인지 확인")
     void equalPosition() {
-        assertThat(Car.of("juniq").equalPosition(1)).isFalse();
+        assertThat(Car.of("juniq").equalPosition(Position.of(1))).isFalse();
     }
 }
