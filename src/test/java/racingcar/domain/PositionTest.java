@@ -13,4 +13,12 @@ class PositionTest {
 
         assertThat(position).usingRecursiveComparison().isEqualTo(Position.of(1));
     }
+
+    @Test
+    void max() {
+        Position position = Position.of(0);
+        Position otherPosition = Position.of(1);
+
+        assertThat(position.max(otherPosition)).usingRecursiveComparison().isEqualTo(otherPosition);
+    }
 }

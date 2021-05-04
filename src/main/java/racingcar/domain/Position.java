@@ -20,4 +20,8 @@ public class Position {
     public int value() {
         return position;
     }
+
+    public Position max(Position otherPosition) {
+        return this;
+    }
 }
